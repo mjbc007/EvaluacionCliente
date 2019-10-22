@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EvaluacionCliente.Evaluacion" BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="5, 10">
+                <Label FontSize="24" HorizontalTextAlignment="Center" Text="¡Por Favor! Evalúa nuestro servicio y atención al cliente."
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <ImageButton Margin="20, 0, 20, 10" BackgroundColor="White" WidthRequest="100" x:Name="btnBien" Source="carafeliz.png" Clicked="BtnBien_OnClick" />
+                <ImageButton Margin="20, 0, 20, 0" BackgroundColor="White" WidthRequest="100" x:Name="btnMal" Source="caraenojada.png" Clicked="BtnBien_OnClick" />
+                <ImageButton Margin="20, 0, 20, 0" BackgroundColor="White" WidthRequest="100" x:Name="btnIndiferente" Source="carapensando.png" Clicked="BtnBien_OnClick" />
+            </StackLayout>
+            <StackLayout>
+                <Label x:Name="texto" HorizontalOptions="Center" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
