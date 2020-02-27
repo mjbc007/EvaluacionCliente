@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CA1031: No capture tipos de excepción generales.
+dotnet_diagnostic.CA1031.severity = warning

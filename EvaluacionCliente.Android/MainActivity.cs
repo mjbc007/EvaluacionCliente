@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using FFImageLoading.Forms.Platform;
 
 namespace EvaluacionCliente.Droid
 {
@@ -18,6 +19,8 @@ namespace EvaluacionCliente.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+			Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
+			CachedImageRenderer.Init(true);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
