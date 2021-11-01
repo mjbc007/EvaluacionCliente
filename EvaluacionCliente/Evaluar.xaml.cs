@@ -18,7 +18,9 @@ namespace EvaluacionCliente
 	public partial class Evaluar : ContentPage
 	{
 		Dispositivo o_dispositivo = new Dispositivo();
+		Sucursal o_sucursal = new Sucursal();
 		List<Dispositivo> listaDispositivos;
+		List<Sucursal> listaSucursales;
 
 		public Evaluar()
 		{
@@ -31,10 +33,16 @@ namespace EvaluacionCliente
 			var lista = new List<Evaluacion>();
 			lista = await App.Database.ObtenerEvaluaciones().ConfigureAwait(true);
 			listaDispositivos = await App.Database.ObtenerDispositivo().ConfigureAwait(true);
+			listaSucursales = await App.Database.ObtenerSucursal().ConfigureAwait(true);
 			if (listaDispositivos.Count > 0)
 			{
 				o_dispositivo = (from tab in listaDispositivos
 								 select tab).FirstOrDefault();
+			}
+			if (listaSucursales.Count > 0)
+			{
+				o_sucursal = (from tab in listaSucursales
+							  select tab).FirstOrDefault();
 			}
 		}
 
@@ -45,6 +53,7 @@ namespace EvaluacionCliente
 				evaluacion = 1,
 				fecha_evaluacion = DateTime.Now,
 				device_name = o_dispositivo.nombre,
+				sucursal = o_sucursal.sucursal,
 			}).ConfigureAwait(true);
 			var loadingPage = new CustomGIFLoader();
 			await PopupNavigation.PushAsync(loadingPage).ConfigureAwait(true);
@@ -59,6 +68,7 @@ namespace EvaluacionCliente
 				evaluacion = 2,
 				fecha_evaluacion = DateTime.Now,
 				device_name = o_dispositivo.nombre,
+				sucursal = o_sucursal.sucursal,
 			}).ConfigureAwait(true);
 			var loadingPage = new CustomGIFLoader();
 			await PopupNavigation.PushAsync(loadingPage).ConfigureAwait(true);
@@ -73,6 +83,7 @@ namespace EvaluacionCliente
 				evaluacion = 3,
 				fecha_evaluacion = DateTime.Now,
 				device_name = o_dispositivo.nombre,
+				sucursal = o_sucursal.sucursal,
 			}).ConfigureAwait(true);
 			var loadingPage = new CustomGIFLoader();
 			await PopupNavigation.PushAsync(loadingPage).ConfigureAwait(true);

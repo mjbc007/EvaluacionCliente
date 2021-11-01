@@ -22,7 +22,7 @@
                 <Image Source="promaco.png" Grid.Column="5" Grid.Row="0" />
             </Grid>
             <StackLayout Padding="5, 10">
-                <Label FontSize="Large" HorizontalTextAlignment="Center" Text="¿Como te atendimos hoy?"
+                <Label FontSize="50" HorizontalTextAlignment="Center" Text="¿Como te atendimos hoy?"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             </StackLayout>

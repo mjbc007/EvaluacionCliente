@@ -17,7 +17,7 @@ namespace EvaluacionCliente
 			_database.CreateTableAsync<Evaluacion>().Wait();
 			_database.CreateTableAsync<Acceso>().Wait();
 			_database.CreateTableAsync<Dispositivo>().Wait();
-			_database.CreateTableAsync<Servidores>().Wait();
+			_database.CreateTableAsync<Sucursal>().Wait();
 		}
 
 		public Task<int> GuardarEvaluacion(Evaluacion evaluacion)
@@ -68,6 +68,23 @@ namespace EvaluacionCliente
 		public Task<int> ActualizarDispositivo(Dispositivo dispositivo)
 		{
 			return _database.UpdateAsync(dispositivo);
+		}
+
+
+		//Código Sucursal
+		public Task<int> GuardarSucursal(Sucursal sucursal)
+		{
+			return _database.InsertAsync(sucursal);
+		}
+
+		public Task<List<Sucursal>> ObtenerSucursal()
+		{
+			return _database.Table<Sucursal>().ToListAsync();
+		}
+
+		public Task<int> ActualizarSucursal(Sucursal sucursal)
+		{
+			return _database.UpdateAsync(sucursal);
 		}
 	}
 }

@@ -15,7 +15,6 @@
                 <ImageButton Source="database.png" BackgroundColor="White" WidthRequest="100" Clicked="Datos_Clicked" />
                 <ImageButton Source="evaluacion.png" BackgroundColor="White" WidthRequest="100" Clicked="Evaluacion_Clicked" />
             </StackLayout>
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

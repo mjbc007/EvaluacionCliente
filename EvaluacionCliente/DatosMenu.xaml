@@ -11,12 +11,17 @@
                 <ImageButton Source="promaco.png" WidthRequest="100" Margin="0, 0, 0, 10" VerticalOptions="Center" HorizontalOptions="Center" />
                 <Label Text="Nombre de dispositivo: " HorizontalOptions="Center" />
                 <Label x:Name="lblNombreDispositivo" HorizontalOptions="Center" />
+                <Label x:Name="lblSucursal" HorizontalOptions="Center" />
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                     <Button Text="Cambiar" Clicked="GuardarNombre_Clicked" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="Cambiar" Clicked="GuardarSucursal_Clicked" />
                 </StackLayout>
                 <Button Text="Subir Datos" HorizontalOptions="Center" WidthRequest="200" Clicked="SubirDatos_Clicked" />
                 <Button Text="Eliminar Datos" HorizontalOptions="Center" WidthRequest="200" Clicked="BorrarDatos_Clicked" />
                 <Button Text="Servidores" HorizontalOptions="Center" WidthRequest="200" Clicked="btnServidores_Clicked" />
+                <Button Text="Exportar" HorizontalOptions="Center" WidthRequest="200" Clicked="btnExportarDatos" />
                 <Label x:Name="texto" Text="Total registros: " VerticalOptions="EndAndExpand" />
             </StackLayout>
         </ScrollView>

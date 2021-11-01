@@ -61,11 +61,110 @@ namespace EvaluacionCliente {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Se han limpiado los datos.
+        /// </summary>
+        internal static string DatosLimpios {
+            get {
+                return ResourceManager.GetString("DatosLimpios", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Proceso finalizado correctamente.
+        /// </summary>
+        internal static string FinalizadoCorrectamente {
+            get {
+                return ResourceManager.GetString("FinalizadoCorrectamente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Se guardó el registro.
         /// </summary>
         internal static string GuardaRegistro {
             get {
                 return ResourceManager.GetString("GuardaRegistro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No hay datos de acceso, revise si el usuario existe o si el usuario y contraseña ingresado son correctos.
+        /// </summary>
+        internal static string NoAcceso {
+            get {
+                return ResourceManager.GetString("NoAcceso", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No hay datos para sincronizar.
+        /// </summary>
+        internal static string NoDatosSincroniza {
+            get {
+                return ResourceManager.GetString("NoDatosSincroniza", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Proceso no finalizó correctamente.
+        /// </summary>
+        internal static string NoFinalizaProceso {
+            get {
+                return ResourceManager.GetString("NoFinalizaProceso", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ingrese el nombre del dispositivo.
+        /// </summary>
+        internal static string NombreDispositivo {
+            get {
+                return ResourceManager.GetString("NombreDispositivo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El nombre del dispositivo no puede ser en blanco o nulo.
+        /// </summary>
+        internal static string NombreDispositivoVacio {
+            get {
+                return ResourceManager.GetString("NombreDispositivoVacio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El dispositivo no tiene nombre asignado.
+        /// </summary>
+        internal static string SinNombre {
+            get {
+                return ResourceManager.GetString("SinNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El dispositivo no tiene asignado sucursal.
+        /// </summary>
+        internal static string SinSucursal {
+            get {
+                return ResourceManager.GetString("SinSucursal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ingrese el identificador para sucursal.
+        /// </summary>
+        internal static string Sucursal {
+            get {
+                return ResourceManager.GetString("Sucursal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La sucursal no puede ser en blanco o nulo.
+        /// </summary>
+        internal static string SucursalVacia {
+            get {
+                return ResourceManager.GetString("SucursalVacia", resourceCulture);
             }
         }
     }

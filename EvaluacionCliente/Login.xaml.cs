@@ -28,7 +28,7 @@ namespace EvaluacionCliente
 				btnAceptar.IsEnabled = false;
 				if (usuario != null)
 				{
-					var cliente = new RestClient("http://192.168.11.91:8004");
+					var cliente = new RestClient(Globales.Servidor);
 					//var cliente = new RestClient("http://it01:8004");
 					var peticion = new RestRequest("accesos/", Method.GET);
 					peticion.AddParameter("usuario", usuario);
@@ -40,7 +40,7 @@ namespace EvaluacionCliente
 					}
 					else if (respuestaServer.Data.Count == 0)
 					{
-						await DisplayAlert("Datos de acceso", "No hay datos de acceso, revise si el usuario existe o si el usuario y contraseña ingresado son correctos", "Aceptar").ConfigureAwait(true);
+						await DisplayAlert("Datos de acceso", AppResources.NoAcceso, "Aceptar").ConfigureAwait(true);
 						btnAceptar.IsEnabled = true;
 					}
 				}
