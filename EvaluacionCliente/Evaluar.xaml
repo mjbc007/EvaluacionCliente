@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EvaluacionCliente.Evaluar">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <Grid Margin="0, 20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Source="promaco.png" Grid.Column="5" Grid.Row="0" />
+            </Grid>
+            <StackLayout Padding="5, 10">
+                <Label FontSize="50" HorizontalTextAlignment="Center" Text="¿Como te atendimos hoy?"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" BackgroundColor="White">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <ImageButton HorizontalOptions="Fill" Grid.Row="1" Grid.Column="0" BackgroundColor="White" x:Name="btnBien" Source="carafeliz.png" Clicked="BtnBien_OnClick" />
+                    <ImageButton HorizontalOptions="Fill" Grid.Row="1" Grid.Column="1" BackgroundColor="White" x:Name="btnIndiferente" Source="carapensando.png" Clicked="BtnMedio_OnClick" />
+                    <ImageButton HorizontalOptions="Fill" Grid.Row="1" Grid.Column="2" BackgroundColor="White" x:Name="btnMal" Source="caraenojada.png" Clicked="BtnMalo_OnClick" />
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
